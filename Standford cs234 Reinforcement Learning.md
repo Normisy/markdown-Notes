@@ -199,5 +199,6 @@ $$ \pi_{i+1}(s)=\arg\max_a Q^{\pi_{i}}(s,a)\quad \forall s\in S$$
 因此，我们需要确认，为什么这样的算法得到的改进后的策略的Q值会比原策略更高
 $$ \begin{align}
 Q^{\pi_i}(s,a)&=R(s,a)+\gamma \sum\limits_{s^{'}\in S}P(s^{'}|s,a)V^{\pi_i}(s^{'})\\
-\max_a Q^{\pi_i}(s,a) &\r
+\max_a Q^{\pi_i}(s,a) &\geq  R(s,\pi_i(s))+\gamma \sum\limits_{s^{'}\in S}P(s^{'}|s,\pi_i(s))V^{\pi_i}(s^{'})\\
+&=V^{\pi_i}(s)
 \end{align}$$
