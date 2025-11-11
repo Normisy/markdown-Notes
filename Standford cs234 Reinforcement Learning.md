@@ -202,3 +202,4 @@ Q^{\pi_i}(s,a)&=R(s,a)+\gamma \sum\limits_{s^{'}\in S}P(s^{'}|s,a)V^{\pi_i}(s^{'
 \max_a Q^{\pi_i}(s,a) &\geq  R(s,\pi_i(s))+\gamma \sum\limits_{s^{'}\in S}P(s^{'}|s,\pi_i(s))V^{\pi_i}(s^{'})\\
 &=V^{\pi_i}(s)
 \end{align}$$
+可以发现，如果在Q函数计算中，将行动a一直固定为$\pi_i(s)$，那么这个Q函数就退化成了$V^{\pi_i}(s)$，
