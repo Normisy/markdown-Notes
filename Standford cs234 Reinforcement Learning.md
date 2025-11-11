@@ -196,4 +196,8 @@ $$ Q^{\pi}(s,a)=R(s,a)+\gamma \sum\limits_{s^{'}\in S}P(s^{'}|s,a)V^{\pi}(s^{'})
 $$ \pi_{i+1}(s)=\arg\max_a Q^{\pi_{i}}(s,a)\quad \forall s\in S$$
 它代表了对$\pi_i$策略进行改进后的策略
 
-因此，我们需要确认，为什么这样的算法能够得到一个改进后的策略
+因此，我们需要确认，为什么这样的算法得到的改进后的策略的Q值会比原策略更高
+$$ \begin{align}
+Q^{\pi_i}(s,a)&=R(s,a)+\gamma \sum\limits_{s^{'}\in S}P(s^{'}|s,a)V^{\pi_i}(s^{'})\\
+\max_a Q^{\pi_i}(s,a) &\r
+\end{align}$$
