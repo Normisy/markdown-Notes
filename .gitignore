@@ -1,0 +1,45 @@
+
+.DS_Store
+.obsidian/cache
+.obsidian/daily-notes.json
+.obsidian/facets.json
+.obsidian/starred.json
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/workspaces.json
+# obsidian缓存文件
+.Thumbs.db
+书/FFmpeg从入门到精通 (刘歧 赵文杰) (Z-Library).pdf
+书/Java核心技术·卷 II（原书第11版）：高级特性 (凯 S.霍斯特曼 (Cay S.Horstmann)) (Z-Library).pdf
+书/Java核心技术·卷 I（原书第11版） (凯·S.霍斯特曼 (Cay S. Horstmann)) (Z-Library).pdf
+书/Python3网络爬虫开发实战 第2版 (崔庆才) (Z-Library).pdf
+书/Qt 5.9 C++开发指南 (王维波,栗宝鹃,侯春望) (Z-Library).pdf
+书/动漫角色速绘秘技.pdf
+书/数据结构、算法与应用（原书第2版） C++语言描述 (Sartaj Sahni) (Z-Library).pdf
+书/深入理解计算机系统 (Randal E. Bryant_ (Z-Library).pdf
+书/现代操作系统 (Andrew S. Tanenbaum, Herbert Bos) (Z-Library).pdf
+书/算法导论（原书第3版） (Thomas H.Cormen,Charles E.Leiserson etc.) (Z-Library).pdf
+书/角色绘制重点攻略【1】.pdf
+书/角色绘制重点攻略【2】.pdf
+书/计算机网络（原书第7版） 自顶向下方法 (James_ (Z-Library).pdf
+# 其他
+# 特定设备工作区状态
+# 系统自动生成的文件
+
+# Obsidian
+.obsidian/workspace.json
+.obsidian/workspace
+.obsidian/workspace-mobile.json
+.obsidian/cache
+.obsidian/plugins/*/data.json
+.trash/
+
+*.pdf
+*.zip
+*.mp4
+*.avi
+*.mov
+*.png
+图片
+*.jpg
+gif
