@@ -2313,6 +2313,18 @@ void os_run() {
 	spin_lock(&AAA);
 	spin_lock(&BBB);
 	spin_unlock(&BBB);
+	// ...执行到这一步时发生了中断
+	spin_unlock(&AAA);
 }
 ```
-`unlock`之后，中断被打开了，如果此时fa she
+`unlock`之后，中断被打开了，如果此时发生了中断，中断处理程序运行时需要先获得该线程持有的`&AAA`钥匙：
+```c
+void on_interrupt(){
+	spin_lock(&AAA);
+	spin_unlock(&AAA);
+}
+```
+但是此时线程还没有释放这把锁，又需要等待中断处理程序执行完毕之后释放，这就导致它们互相等待，发生了死锁。
+因此在屏蔽中断时，需要维护一个计数器，获得锁时+1,释放锁时-1。只有当计数器为0的时候才开中断
+
+更常见的情况
