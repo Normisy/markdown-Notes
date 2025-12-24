@@ -229,4 +229,9 @@ NAT（网络地址转换）是一个非常具有代表性的例子，它是一�
 
 在wireshark工具中，一个数据包看起来像是如下这样的：
 ![[Pasted image 20251224112332.png]]
-最上方告诉我们该数据包是一个以太网帧，其中包含了下一行
+最上方告诉我们该数据包是一个以太网帧，其中包含了下两行`Internet Protocol Version 4`开头的部分所描述的IP数据包；而IP数据包中又包含了它下一行`Transmission Contorl Protocol`开头描述的TCP段；TCP段中又包含了最下面的`HTTP`段，其中包含`HTTP GET`请求
+
+wireshark能够将每一部分在数据包实际字节中的位置标注出来：
+![[Pasted image 20251224112754.png]]
+
+这就是非常简单的将协议封装在数据包内部的方法
