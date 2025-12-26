@@ -2453,3 +2453,5 @@ pop_off(void)
 例如，系统里有ABC三个资源的三把锁，并且为他们规定了$A\rightarrow B\rightarrow C$的顺序，位于前面的锁只能先被`lock`，例如`lock(A)`$\rightarrow$`lock(C)`是可以的，但是不能先`lock(C)`再`lock(A)`
 
 为了检查这个思想是否正确，我们还是检查它的状态空间，只要不存在绕环
+
+Lock-Ordering是正确的，并且工业界很多实现都会使用它，然而如果你看过
