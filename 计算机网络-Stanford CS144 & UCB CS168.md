@@ -291,7 +291,7 @@ traceroute -w 1 [网址]
 ![[Pasted image 20251228205946.png]]
 **并不是每个网络都使用相同的路由协议**，我们可以将所有路由协议分为以下两类：
 1. 域内路由协议（Intra-domain routing protocols）：不考虑其他网络，只解决单一特定网络内部的设备的路由问题的协议，也称为**内部网关协议IGPs**，每个网络可以选择自己的域内路由协议
-2. 
+2. 域间路由协议（Inter-domain routing protocols）：不考虑每个本地网络内部的
 
 
 # Lecture 4. 分组交换理论
