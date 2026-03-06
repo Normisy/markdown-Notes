@@ -725,6 +725,8 @@ $$ \begin{align}
 \bar{A}+\bar{B}+\bar{C}+\cdots&=\overline{A\cdot B\cdot C\cdots}
 \end{align}$$
 
-- 一个**与非门**$\overline{A+B+C+\cdots}=\bar{A}\cdot\bar{B}$，它相当于是一个**将多个输入信号取反的==或门==**
-- 一个**或非门**$\overline{A\cdot B}=\bar{A}+\bar{B}$，它相当于是一个**将多个输入信号取反的==与门
+- 一个**与非门**$\overline{A+B+C+\cdots}=\bar{A}\cdot\bar{B}\cdot\bar{C}\cdots$，它相当于是一个**将多个输入信号取反的==或门==**
+- 一个**或非门**$\overline{A\cdot B\cdot C\cdots}=\bar{A}+\bar{B}+\bar{C}+\cdots$，它相当于是一个**将多个输入信号取反的==与门==**
+
+![[Pasted image 20260306225320.png]]
 
