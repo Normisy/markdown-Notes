@@ -677,3 +677,7 @@ $$ \begin{align}
 \bar{A}\cdot \bar{B}&=\overline{A+B}\\
 \bar{A}+\bar{B}&=\overline{A\cdot B}
 \end{align}$$
+两个二输入与非门接入一个或非门就相当于：
+$$ \begin{align}
+&\overline{\bar{A}+\bra{B}}+\overline{\bar{C}+\bar{D}}\\
+&=\
