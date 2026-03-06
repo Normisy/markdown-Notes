@@ -654,3 +654,5 @@ A\oplus B=A\cdot \bar{B}+\bar{A}\cdot B
 $$
 当输入信号AB相同时，输出`0`；当AB不同时，输出`1`。也是一种和之积的布尔方程
 ![[Pasted image 20260306201203.png]]
+
+### 6.2.3 
