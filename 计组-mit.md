@@ -680,7 +680,7 @@ $$ \begin{align}
 由德摩根定律，两个二输入与非门接入一个或非门就相当于：
 $$ \begin{align}
 &\quad\overline{\bar{A}\cdot \bar{B}+\bar{C}\cdot\bar{D}}\\
-&=\overline{\bar{A}\cdot \bar{B}}\cdot \overline{\bar{C}\cdot \bar{D}}\\
+&=\overline{\bar{A}\cdot \bar{B}}+ \overline{\bar{C}\cdot \bar{D}}\\
 &=A+B+C+D
 \end{align}$$
 一个四路与门！
@@ -690,4 +690,8 @@ $$ \begin{align}
 
 ##### 多输入与非门
 我们期望一个多输入与非门能够实现布尔方程：
-$$ \bar{X_1}+\bar{X_2}+\cdots 
+$$ \bar{X_1}+\bar{X_2}+\cdots + \bar{X_n}$$
+借鉴之前的思想，以8路与非门为例：
+$$ \begin{align}
+&\quad \overline{A\cdot B}+\overline{C\cdot D}\\
+&=
