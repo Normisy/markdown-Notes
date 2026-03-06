@@ -677,7 +677,13 @@ $$ \begin{align}
 \bar{A}\cdot \bar{B}&=\overline{A+B}\\
 \bar{A}+\bar{B}&=\overline{A\cdot B}
 \end{align}$$
-两个二输入与非门接入一个或非门就相当于：
+由德摩根定律，两个二输入与非门接入一个或非门就相当于：
 $$ \begin{align}
-&\overline{\bar{A}+\bra{B}}+\overline{\bar{C}+\bar{D}}\\
-&=\
+&\quad\overline{\bar{A}\cdot \bar{B}+\bar{C}\cdot\bar{D}}\\
+&=\overline{\bar{A}\cdot \bar{B}}\cdot \overline{\bar{C}\cdot \bar{D}}\\
+&=A+B+C+D
+\end{align}$$
+一个四路与门！
+
+#### 构建多输入
+借鉴这样的思想
