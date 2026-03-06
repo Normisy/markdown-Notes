@@ -701,6 +701,6 @@ $$ \bar{X_1}+\bar{X_2}+\cdots + \bar{X_n}$$
 那么8路与非门
 
 $$ \begin{align}
-&\quad \overline{\overline{A+ B}\cdot \overline{C+ D}}\\
+&\quad \overline{\bar{A}\cdot \bar{B}+\bar{C}\cdot\bar{D}}+\overline{\bar{E}\cdot \bar{F}+\bar{G}\cdot\bar{H}}\\
 &=
 \end{align}$$
