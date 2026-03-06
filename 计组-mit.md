@@ -711,4 +711,20 @@ $$ \bar{X_1}+\bar{X_2}+\cdots + \bar{X_n}$$
 
 将最后一层的与非门视为输入取反的或门
 其输入是$ABCD$和$EFGH$，取反后$\overline{ABCD}$和$\overline{EFGH}$，再求或
-$\overline{ABCD}+\overline{EFGH}=\overline{ABCDEF}
+$$\overline{ABCD}+\overline{EFGH}=\overline{ABCDEFGH}$$
+最后果然是八路与非门！！
+
+##### 多输入或非门
+同理，多输入或非门也是一样的，实际上将多输入与非门的二路与非门和或非门调换即可。这里省略证明
+![[Pasted image 20260306224736.png]]
+
+#### 利用反相逻辑编写任意布尔表达式
+对于多输入或非门/与非门，我们的视角依然不变：
+$$ \begin{align}
+\bar{A}\cdot \bar{B}\cdot\bar{C}\cdots&=\overline{A+B+C+\cdots}\\
+\bar{A}+\bar{B}+\bar{C}+\cdots&=\overline{A\cdot B\cdot C\cdots}
+\end{align}$$
+
+- 一个**与非门**$\overline{A+B+C+\cdots}=\bar{A}\cdot\bar{B}$，它相当于是一个**将多个输入信号取反的==或门==**
+- 一个**或非门**$\overline{A\cdot B}=\bar{A}+\bar{B}$，它相当于是一个**将多个输入信号取反的==与门
+
