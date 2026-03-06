@@ -699,8 +699,9 @@ $$ \bar{X_1}+\bar{X_2}+\cdots + \bar{X_n}$$
 借鉴之前的思想，以8路与非门为例：
 从上一节的最后一个AND电路中我们知道了$\overline{\bar{A}\cdot \bar{B}+\bar{C}\cdot\bar{D}}=A+B+C+D$
 那么8路与非门
+![[Pasted image 20260306221824.png]]
 
 $$ \begin{align}
-&\quad \overline{\bar{A}\cdot \bar{B}+\bar{C}\cdot\bar{D}}+\overline{\bar{E}\cdot \bar{F}+\bar{G}\cdot\bar{H}}\\
+&\quad (\overline{\overline{\bar{A}\cdot \bar{B}+\bar{C}\cdot\bar{D}}})\cdot (\overline{\overline{\bar{E}\cdot \bar{F}+\bar{G}\cdot\bar{H}}})\\
 &=
 \end{align}$$
