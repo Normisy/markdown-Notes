@@ -692,8 +692,8 @@ $$ \begin{align}
 \bar{A}+\bar{B}&=\overline{A\cdot B}
 \end{align}$$
 可以发现：
-- 一个与非门$\overline{A+B}=\bar{A}\cdot\bar{B}$，它相当于是一个**将两个shu'ru
-
+- 一个**与非门**$\overline{A+B}=\bar{A}\cdot\bar{B}$，它相当于是一个**将两个输入信号取反的==或门==**
+- 一个**或非门**$\overline{A\cdot B}=\bar{A}+\bar{B}$，它相当于是一个**将两个输入信号取反的==与门==**
 
 ##### 多输入与非门
 我们期望一个多输入与非门能够实现布尔方程：
@@ -704,11 +704,6 @@ $$ \bar{X_1}+\bar{X_2}+\cdots + \bar{X_n}$$
 然而，当大于四路的时候就出现问题了：沟道的电阻开始累积，如果加宽沟道宽度会导致栅极太大，电容负载更大。因此**最多只有四路与非门能够作为单独的宏单元存在，更多路需要使用多个元件组合的方式实现**
 
 借鉴之前的思想，以8路与非门为例：
-从上一节的最后一个AND电路中我们知道了$\overline{\overline{A\cdot B}+\overline{C\cdot D}}=A\cdot B\cdot C\cdot D$
+从上一节的最后一个AND电路中我们知道了
 那么8路与非门
 ![[Pasted image 20260306221824.png]]
-
-$$ \begin{align}
-&\quad (\overline{\overline{\bar{A}\cdot \bar{B}+\bar{C}\cdot\bar{D}}})\cdot (\overline{\overline{\bar{E}\cdot \bar{F}+\bar{G}\cdot\bar{H}}})\\
-&=
-\end{align}$$
