@@ -704,4 +704,11 @@ $$ \bar{X_1}+\bar{X_2}+\cdots + \bar{X_n}$$
 然而，当大于四路的时候就出现问题了：沟道的电阻开始累积，如果加宽沟道宽度会导致栅极太大，电容负载更大。因此**最多只有四路与非门能够作为单独的宏单元存在，更多路需要使用多个元件组合的方式实现**
 
 利用德摩根定律的“与非门=输入取反的或门，或非门=输入取反的与门”的视角，那么8路与非门：
-![[Pasted image 20260306221824.png]]
+![[Pasted image 20260306224136.png]]
+将中间层的或非门视为输入取反的与门
+在两个并联的三元件电路中，那个或非门输入的是$\overline{A\cdot B}$和$\overline{C\cdot D}$，取反后就是$A\cdot B$和$C\cdot D$
+再求与，得到的就是$A\cdot B\cdot C\cdot D$
+
+将最后一层的与非门视为输入取反的或门
+其输入是$ABCD$和$EFGH$，取反后$\overline{ABCD}$和$\overline{EFGH}$，再求或
+$\overline{ABCD}+\overline{EFGH}=\overline{ABCDEF}
