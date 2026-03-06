@@ -656,4 +656,8 @@ $$
 ![[Pasted image 20260306201203.png]]
 
 ### 6.2.3 反相逻辑
-[课程提供的标准元件库的文档页面点这里]
+[课程提供的标准元件库的文档页面点这里](https://computationstructures.org/exercises/tool_docs/stdcell.html)
+
+在课程图根的标准元件库中，我们可以看到提供的很多元件及其参数信息：
+![[Pasted image 20260306210858.png]]
+我们注意到它把AND4和NAND4+INV分开了，实际上CMOS中所有AND逻辑都是通过NAND+INV实现的，但区别在于这里的AND是将它们作为一个宏单元整体优化、设计内部布线逻辑的，因此体积要比两个独立单元加一起小得多，但延迟时间
