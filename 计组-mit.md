@@ -692,6 +692,10 @@ $$ \begin{align}
 我们期望一个多输入与非门能够实现布尔方程：
 $$ \bar{X_1}+\bar{X_2}+\cdots + \bar{X_n}$$
 借鉴之前的思想，以8路与非门为例：
+从上一节的最后一个AND电路中我们知道了$\overline{\bar{A}\cdot \bar{B}+\bar{C}\cdot\bar{D}}=A+B+C+D$
+那么8路与非门
+
 $$ \begin{align}
-&\quad \overline{A\cdot B}+\overline{C\cdot D}\\
+&\quad \overline{\overline{A+ B}\cdot \overline{C+ D}}\\
 &=
+\end{align}$$
