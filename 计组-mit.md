@@ -728,6 +728,6 @@ $$ \begin{align}
 - 一个**与非门**$\overline{A+B+C+\cdots}=\bar{A}\cdot\bar{B}\cdot\bar{C}\cdots$，它相当于是一个**将多个输入信号取反的==或门==**
 - 一个**或非门**$\overline{A\cdot B\cdot C\cdots}=\bar{A}+\bar{B}+\bar{C}+\cdots$，它相当于是一个**将多个输入信号取反的==与门==**
 
-在实际应用中，我们一般不直接使用NAND和NOR编写积之和布尔表达式，而是首先正常地使用“或、与”门
+在实际应用中，我们一般不直接使用NAND和NOR编写积之和布尔表达式，而是首先正常地使用“或、与”门实现积之和的
 ![[Pasted image 20260306225320.png]]
 
