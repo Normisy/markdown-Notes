@@ -718,7 +718,7 @@ $$\overline{ABCD}+\overline{EFGH}=\overline{ABCDEFGH}$$
 同理，多输入或非门也是一样的，实际上将多输入与非门的二路与非门和或非门调换即可。这里省略证明
 ![[Pasted image 20260306224736.png]]
 
-#### 利用反相逻辑编写任意布尔表达式
+#### 利用反相逻辑编写任意布尔表达式的CMOS电路
 对于多输入或非门/与非门，我们的视角依然不变：
 $$ \begin{align}
 \bar{A}\cdot \bar{B}\cdot\bar{C}\cdots&=\overline{A+B+C+\cdots}\\
@@ -728,6 +728,6 @@ $$ \begin{align}
 - 一个**与非门**$\overline{A+B+C+\cdots}=\bar{A}\cdot\bar{B}\cdot\bar{C}\cdots$，它相当于是一个**将多个输入信号取反的==或门==**
 - 一个**或非门**$\overline{A\cdot B\cdot C\cdots}=\bar{A}+\bar{B}+\bar{C}+\cdots$，它相当于是一个**将多个输入信号取反的==与门==**
 
-对于同一个布尔表达式，看
+在实际应用中，我们一般不直接使用NAND和NOR编写积之和布尔表达式，而是首先正常地使用“或、与”门
 ![[Pasted image 20260306225320.png]]
 
