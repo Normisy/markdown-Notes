@@ -774,4 +774,13 @@ ab+\bar{a}b&=b\\
 它将涉及两个变量、四个运算的表达式简化为最终一个变量
 
 ### 6.3.2 利用简化恒等式优化SOP表达式
-恒等式$\alpha A+\alpha \bar{A}=\alpha(A+\bar{A})=\alpha\cdot A=\alpha$可用于简化存在“互补项·
+恒等式$\alpha A+\alpha \bar{A}=\alpha(A+\bar{A})=\alpha\cdot A=\alpha$可用于简化存在“互补项·相同项”的SOP表达式，以之前的例子：
+$$ \begin{align}
+Y&=\bar{C}\bar{B}A+CB\bar{A}+CBA+\bar{C}BA\\
+&=\bar{C}\bar{B}A+\bar{C}BA+CB\bar{A}+CBA\\
+&=\bar{C}A(\bar{B}+B)+CB(\bar{A}+A)\\
+&=\bar{C}A+CB
+\end{align}$$
+运算和输入都极大地被简化了
+
+#### 算法
