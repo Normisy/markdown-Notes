@@ -1139,7 +1139,9 @@ $$ \begin{align}
 t_{CD,R}(1 ns)+t_{CD,L}&\geq t_{H,R}(2 ns)\\
 t_{CD,L}&\geq 1ns
 \end{align}$$
-    计算得到L的污染延迟至少为1ns
 
-
-"寄存器传播延迟+L的chuan'bo"
+2. "寄存器传播延迟+L的传播延迟+寄存器建立时间"即为**整个电路正常工作需要的最长时间**，CLK的**最小时钟周期**必须大于等于该时间
+$$ \begin{align}
+t_{CLK}&\geq t_{PD,R}+t_{PD,L}+t_{S,R}\\
+t_{CLK}&\geq 10ns
+\end{align}$$
