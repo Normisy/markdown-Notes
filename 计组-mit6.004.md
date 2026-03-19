@@ -1145,3 +1145,14 @@ $$ \begin{align}
 t_{CLK}&\geq t_{PD,R}+t_{PD,L}+t_{S,R}\\
 t_{CLK}&\geq 10ns
 \end{align}$$
+
+
+接下来需要考虑**逻辑电路L的输入信号Input**相对于CLK上升沿需要满足的时序条件
+![[Pasted image 20260319223819.png]]
+电路L将Next State输出给寄存器，该状态信号需要满足寄存器的建立时间和保持时间限制。
+而输入信号Input的变化经过传播延迟时间后，才会导致Next State的变化，并且Next State信号会保持污染延迟时间的旧值不变
+
+根据以上信息，可得：
+$$\begin{align}
+t_{S,INPUT}=t_{PD,L}+t_{S,R}=hns+2ns=7ns\\
+t_{H,INPUT}=t_{H,R}-t_{}
