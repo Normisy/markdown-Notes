@@ -1153,6 +1153,11 @@ t_{CLK}&\geq 10ns
 而输入信号Input的变化经过传播延迟时间后，才会导致Next State的变化，并且Next State信号会保持污染延迟时间的旧值不变
 
 根据以上信息，可得：
+
 $$\begin{align}
-t_{S,INPUT}=t_{PD,L}+t_{S,R}=hns+2ns=7ns\\
-t_{H,INPUT}=t_{H,R}-t_{}
+t_{S,INPUT}&=t_{PD,L}+t_{S,R}=5ns+2ns=7ns\\
+t_{H,INPUT}&=t_{H,R}-t_{CD,L}=2ns-1ns(至少)=1ns
+\end{align}$$
+即：
+- INPUT在时钟上升沿之前保持至少$t_{S,INPUT}$时间的稳定，下一个状态才会在时钟上升沿之前至少$t_{S,R}$时间前到达寄存器并设置成功，Next State被保存
+- 
