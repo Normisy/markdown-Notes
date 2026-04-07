@@ -1655,7 +1655,10 @@ CMOS电路中，功耗来源根据能否被我们控制，可以分为：
 ![[Pasted image 20260407213321.png]]
 $V_O$是输出电压，C是输出结点的电容，$t_{CLK}$是时钟周期，假设输入$V_{IN}$以其为时钟周期，且每次转换需要$0.5V_{CLK}$
 我们知道$I=C\frac{dV_O}{dt}\Rightarrow P=C\frac{dV_{O}}{dt}V_{O}$
-那么在一次$V_{IN}$的转换周期中，有
+那么在一次$V_{IN}$的转换周期中，设$V_{O}(0)=1, V_O(0.5t_{CLK})=0$（离散变化，电平下降），则此时**下拉电路启动，下拉电路消耗功率为**：
 $$ \begin{align}
-P&= f_{CLK}\in_{0}^{0.5t_{CLK}} iV_{O}dt\\
-&= 
+P&= f_{CLK}\times \int_{0}^{0.5t_{CLK}} iV_{O}dt\\
+&= f_{CLK}\times C\int_{0}^{0.5t_{CLK}} -\frac{dV_{O}}{dt}V_{O}dt\\
+&=f_{CLK}\times C\int_{0}^{0.5t_{CLK}} -V_OdV_O\\
+&=f_{CLK}C\frac{V_{DD}^2}{2}
+\end{align}$$
