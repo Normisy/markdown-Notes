@@ -235,5 +235,3 @@ Events:
 ```
 
 
-> [!NOTE] Title
-> Contents
