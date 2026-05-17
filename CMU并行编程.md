@@ -173,3 +173,4 @@ uniform float* x;
 
 在上面的例子中，通过可视化来描述代码的行为如下，假设programCount == 4：
 ![[Pasted image 20260517214910.png]]
+系统中有4个并发实例，每个实例通过`i+=programCount`确定各自处理的数组
