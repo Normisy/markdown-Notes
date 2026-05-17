@@ -175,4 +175,15 @@ uniform float* x;
 ![[Pasted image 20260517214910.png]]
 系统中有4个并发实例，每个实例通过`i+=programCount`确定各自处理数据后储存的数组位置
 
-ISPC是为了更好使用SIMD向量化指令而产生的高层抽象语言，因为如果
+ISPC是为了更好使用SIMD向量化指令而产生的高层抽象语言，完全可以通过在汇编指令中修改宏、利用SIMD指令来直接编写并行代码，但是为了程序员的san值，一个良好的抽象是有必要的：ISPC使用程序计数来描述这群并行执行的工作”线程“，使得代码形式和C类似但编译器能够生成对应的向量化指令
+
+另一种`sinx.ispc`的实现方式如下所示
+```ispc
+...//前面都一样
+	uniform int count = N /programCount;
+	int strat = programIndex * count;
+	for (uniform int i = 0; i < count; i++)
+	{
+		int idx = start + i;
+//后面都一样
+```
