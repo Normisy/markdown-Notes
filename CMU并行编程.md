@@ -155,4 +155,4 @@ for (uniform int i = 0; i < N; i += programCount)
 ```
 - `programCount`：程序计数，是集合中并发实例的数量，在ISPC中，我们不需要自己设置有多少个并发实例，而是由运行时系统来确定的，可以通过官方文档了解它
 - `programIndex`：确定一个集合中具体的一个并发实例对象
-在此处的for循环中
+在此处的for循环中，i每次跳跃一个programCount的值，这意味着两次i之间的差值就是集合并发实例的数量值，
