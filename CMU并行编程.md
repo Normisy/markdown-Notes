@@ -126,4 +126,15 @@ export void sinx(
 	}
 }
 ```
-看上去使用ISPC编写的代码和c代码差不多，它们被保存在`.ispc`为扩展名的文件中，该文件的代码会使用
+看上去使用ISPC编写的代码和c代码差不多，它们被保存在`.ispc`为扩展名的文件中，该文件的代码会被并行地执行
+ISPC实际上并不是独立的，真正使用ISPC语言的仅有`.ispc`文件中的代码，而为了实际调用这些文件的代码，需要如下的`main.cpp`主程序：
+```cpp
+-------main.cpp
+#include "sinx_icpc.h"
+
+int N = 1024;
+int terms = 5;
+float* x = new float[N];
+float* result = new float[N];
+// zh
+```
