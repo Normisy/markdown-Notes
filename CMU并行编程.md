@@ -169,4 +169,4 @@ int idx = i + programIndex;
 uniform int N;
 uniform float* x;
 ```
-这个关键字
+这个关键字本质上是用于编译器优化的提示：若以uniform作为类型修饰符，则这个值在所有的并发实例中的副本值保持相同
