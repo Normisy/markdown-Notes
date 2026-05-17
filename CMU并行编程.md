@@ -136,5 +136,9 @@ int N = 1024;
 int terms = 5;
 float* x = new float[N];
 float* result = new float[N];
-// zh
+// 执行ISPC代码
+sin(N, terms, x, result);
 ```
+它初始化调用ISPC函数所需要的参数并进行调用
+
+在ISPC的抽象中，我们使用的“线程”都是带引号的，尽管这些并行执行相同代码的
