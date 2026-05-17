@@ -145,7 +145,7 @@ sin(N, terms, x, result);
 
 在ISPC的抽象中，我们使用的“线程”都是带引号的，因为这些执行相同操作的单位和真正的线程本质上是不同的，但边界比较暧昧，我们也会使用集合/团伙gang这样的非正式名词指代它们，本质上就是一群并行工作的程序实例
 
-在ISPC代码中，我们看到很多新的关键字，首先是`for`循环中出现了`programCount`和`programIndex`：
+在ISPC代码中，我们看到很多新的关键字，首先是`for`循环中出现了`programCount`和`programIndex`变量：
 ```
 ...
 for (uniform int i = 0; i < N; i += programCount)
@@ -153,4 +153,6 @@ for (uniform int i = 0; i < N; i += programCount)
 	int idx = i + programIndex;
 ...
 ```
-- `programCount`：程序计数，是并发实例的
+- `programCount`：程序计数，是集合中并发实例的数量，在ISPC中，我们不需要自己设置有多少个并发实例，而是由运行时系统来确定的，可以通过官方文档了解它
+- `programIndex`：确定一个集合中具体的一个并发实例对象
+在此处的for
