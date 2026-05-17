@@ -145,4 +145,11 @@ sin(N, terms, x, result);
 
 在ISPC的抽象中，我们使用的“线程”都是带引号的，因为这些执行相同操作的单位和真正的线程本质上是不同的，但边界比较暧昧，我们也会使用集合/团伙gang这样的非正式名词指代它们
 
-在ISPC代码中，我们能够看到很多新的gua
+在ISPC代码中，我们看到很多新的关键字，首先是`for`循环中出现了`programCount`和`programIndex`：
+```
+...
+for (uniform int i = 0; i < N; i += programCount)
+{
+	int idx = i + programIndex;
+...
+```
