@@ -214,4 +214,18 @@ export uniform float sumall1 (
 	return sum;
 }
 ```
-它的目的是由多个并发实例
+它的目的是希望由多个并发实例计算数组x的所有值之和，但是显然在每个实例中`x[i]`的值是不同的，它们读的不一定是同一个`x[i]`，在并发环境下它的行为是不确定的，因此报错
+
+使其达到同样目的的正确代码如下
+```
+export uniform float sumall1 (
+	uniform int N;
+	uniform float* x)
+{
+	uniform float sum = 0.0f;
+	foreach(i = 0 ... N) {
+		sum += x[i];
+	}
+	return sum;
+}
+```
