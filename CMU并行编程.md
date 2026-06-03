@@ -222,10 +222,14 @@ export uniform float sumall1 (
 	uniform int N;
 	uniform float* x)
 {
-	uniform float sum = 0.0f;
+	uniform float sum;
+	float partial = 0.0f;
 	foreach(i = 0 ... N) {
-		sum += x[i];
+		partial += x[i];
 	}
+	
+	sum = reduce_add(partial);
 	return sum;
 }
 ```
+这里`partial`是每个并发实例本地的部分和对象，并发实例会被分配到`x[i]`数组中一定范围内的互不相容子集，每个示例
