@@ -235,7 +235,7 @@ export uniform float sumall2 (
 这里`partial`是每个并发实例本地的部分和对象，并发实例会被分配到`x[i]`数组中一定范围内的互不相容子集，每个实例计算各自子集的部分和
 这些部分和最终使用ispc中的特殊原语`reduce_add`进行结合，以保证多“进程”的一致同步
 
-使用c语言+avx内联函数实现上述ispc代码如下：
+使用c语言+avx内联函数模拟上述ispc代码如下：
 ```
 #include <immintrin.h> 
 float sumall2(int N, float* x) { 
@@ -254,3 +254,4 @@ float sumall2(int N, float* x) {
 	return sum; 
 }
 ```
+之所以说是模拟，是因为
