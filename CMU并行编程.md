@@ -218,7 +218,7 @@ export uniform float sumall1 (
 
 使其达到同样目的的正确代码如下
 ```
-export uniform float sumall1 (
+export uniform float sumall2 (
 	uniform int N;
 	uniform float* x)
 {
@@ -232,4 +232,6 @@ export uniform float sumall1 (
 	return sum;
 }
 ```
-这里`partial`是每个并发实例本地的部分和对象，并发实例会被分配到`x[i]`数组中一定范围内的互不相容子集，每个示例
+这里`partial`是每个并发实例本地的部分和对象，并发实例会被分配到`x[i]`数组中一定范围内的互不相容子集，每个实例计算各自子集的部分和
+这些部分和最终使用ispc中的特殊原语`reduce_add`进行结合，以保证多“进程”的一致同步
+
