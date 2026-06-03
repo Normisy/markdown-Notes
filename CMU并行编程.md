@@ -208,6 +208,10 @@ export uniform float sumall1 (
 	uniform float* x)
 {
 	uniform float sum = 0.0f;
-	foreach(i = 0 .. )
+	foreach(i = 0 ... N) {
+		sum += x[i];
+	}
+	return sum;
 }
 ```
+它的目的是由多个并发实例
