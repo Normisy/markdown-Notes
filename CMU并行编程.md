@@ -235,3 +235,21 @@ export uniform float sumall2 (
 这里`partial`是每个并发实例本地的部分和对象，并发实例会被分配到`x[i]`数组中一定范围内的互不相容子集，每个实例计算各自子集的部分和
 这些部分和最终使用ispc中的特殊原语`reduce_add`进行结合，以保证多“进程”的一致同步
 
+```
+#include <immintrin.h> 
+float sumall2(int N, float* x) { 
+	float tmp[8]; // assume 16-byte alignment 
+	__m256 partial = _mm256_broadcast_ss(0.0f); 
+	
+	for (int i = 0; i < N; i += 8)
+		partial = _mm256_add_ps(partial, _mm256_load_ps(&x[i])); 
+	
+	
+	_mm256_store_ps(tmp, partial); 
+	
+	float sum = 0.0f; 
+	for (int i = 0; i < 8; i++) 
+	sum += tmp[i]; 
+	return sum; 
+}
+```
