@@ -199,3 +199,15 @@ foreach(i = 0 ... N)
 ...
 }
 ```
+它告诉编译器，根据实际情况选择合适的顺序进行遍历
+
+下面是一段会产生编译错误的ispc代码
+```
+export uniform float sumall1 (
+	uniform int N;
+	uniform float* x)
+{
+	uniform float sum = 0.0f;
+	foreach(i = 0 .. )
+}
+```
