@@ -2489,4 +2489,5 @@ TOCTTOU攻击：例如，一个程序`sendmail`具有高权限，负责先检查
 
 
 
-# Lecture 8. 操作系统的状态机模型
+# Lecture 8.
+
